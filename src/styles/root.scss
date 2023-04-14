@@ -1,14 +1,21 @@
 $bg: rgb(20, 20, 20);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto:wght@100;300;400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     text-decoration: none;
     border: none;
     color: inherit;
     background-color: inherit;
+}
+
+svg,
+img {
+    background: none;
 }
 
 body {
@@ -56,8 +63,81 @@ nav {
 }
 
 .banner {
-    min-height: calc(100vh - 80px);
-    background-color: $bg;
+    height: calc(100vh - 80px);
+    position: relative;
+    color: white;
+    background: none;
+    font-size: 2rem;
+    padding: 6rem;
+
+    >div {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        width: 40%;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+
+        >div {
+            display: flex;
+            gap: 20px;
+
+            >button {
+                cursor: pointer;
+                font-size: 1.5rem;
+                padding: 1rem 3rem;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                color: black;
+                background-color: rgb(255, 255, 255, 0.5);
+
+                &:nth-of-type(2) {
+                    color: white;
+                    background: rgb(20, 20, 20, 0.5);
+
+
+                }
+
+                &:hover {
+                    background-color: rgba(255, 0, 0, 0.75);
+                }
+            }
+        }
+
+
+    }
+
+
+
+    * {
+        position: relative;
+    }
+
+    >img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        opacity: 0.5;
+        background-color: $bg;
+    }
+
 }
 
 .row {
@@ -99,9 +179,10 @@ main {
     // background-color: white;
 
     img {
-        // height: 100%;
         height: 30vh;
+        aspect-ratio: 3/4;
         cursor: pointer;
+        object-fit: contain;
 
         &:hover {
             transform: scale(1.1);
@@ -110,5 +191,3 @@ main {
         }
     }
 }
-
-.banner {}

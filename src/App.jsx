@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		<Fragment>
 			<Header />
-			{/* <Banner /> */}
+			<Banner />
 			<Main />
 		</Fragment>
 	)
